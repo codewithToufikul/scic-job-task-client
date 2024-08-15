@@ -1,7 +1,21 @@
 import { Link } from 'react-router-dom';
 import navLogo from '../assets/logo.png';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+import { useContext } from 'react';
+import toast from 'react-hot-toast';
 
 const Navbar = () => {
+  const { user, logoutUser } = useContext(AuthContext);
+
+  const handleLogOut = () =>{
+    logoutUser()
+      .then(() => {
+        toast.success('Successfully logged out!');
+      })
+      .catch(error => {
+        toast.error(error.message);
+      });
+  }
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -74,9 +88,13 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end w-fit">
+        {
+          user ? <div onClick={handleLogOut} className="navbar-end w-fit">
+          <Link  className="btn bg-orange-400 text-lg font-medium text-white">Log Out !</Link>
+        </div> : <div className="navbar-end w-fit">
           <Link to={'/login'} className="btn bg-blue-400 text-lg font-medium text-white">Sing In</Link>
         </div>
+        }
       </div>
     </div>
   );
