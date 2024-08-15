@@ -4,6 +4,8 @@ import axios from "axios";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -17,17 +19,28 @@ const Home = () => {
     fetchProducts();
   }, []);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    const searchValue = e.target.searchBox.value;
-    console.log(searchValue);
-  };
-
+  useEffect(() => {
+    const query = searchQuery.toLowerCase();
+    const filtered = products.filter(
+      (product) =>
+        product.ProductName.toLowerCase().includes(query) ||
+        product.Category.toLowerCase().includes(query) ||
+        product.ProductCreationDateAndTime.toLowerCase().includes(query)
+    );
+    setFilteredProducts(filtered);
+  }, [searchQuery, products]);
   return (
     <div className="max-w-[1440px] mx-auto">
       <Navbar />
 
-      <form className="max-w-md mx-auto" onSubmit={handleSearch}>
+     <div className=" my-20">
+     <form
+        className="max-w-md mx-auto"
+        onSubmit={(e) => {
+            e.preventDefault()
+          setSearchQuery(e.target.searchBox.value);
+        }}
+      >
         <div className="relative">
           <input
             type="search"
@@ -45,9 +58,10 @@ const Home = () => {
           </button>
         </div>
       </form>
+     </div>
 
       <div className="grid grid-cols-4 gap-4">
-        {products.map((product) => (
+        {filteredProducts.map((product) => (
           <div key={product._id} className="card bg-base-100 shadow-xl">
             <figure className="px-5 pt-5">
               <div className="w-62 h-44">
