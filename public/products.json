@@ -1,0 +1,363 @@
+[
+    {
+      "ProductName": "Wireless Bluetooth Headphones",
+      "ProductImage": "https://cdn.bdstall.com/product-image/giant_240629.jpg",
+      "Description": "Experience unparalleled sound quality with our Wireless Bluetooth Headphones. Equipped with advanced noise cancellation technology, these headphones deliver clear and immersive audio, whether you're listening to music, podcasts, or taking calls. The comfortable over-ear design ensures a snug fit, and with up to 20 hours of battery life, you can enjoy your favorite tunes all day long.",
+      "Price": 79.99,
+      "Category": "Electronics",
+      "Ratings": 4.5,
+      "ProductCreationDateAndTime": "2024-08-15T10:00:00Z"
+    },
+    {
+      "ProductName": "Smartphone Stand",
+      "ProductImage": "https://images-cdn.ubuy.co.in/6601399f311c4504a85d1589-eeekit-cell-phone-stand-desktop-phone.jpg",
+      "Description": "Keep your devices secure and easily accessible with our versatile Smartphone Stand. This stand is fully adjustable, allowing you to find the perfect viewing angle for video calls, streaming, or browsing. Made from durable aluminum alloy, it is both sturdy and lightweight, making it perfect for use at home, in the office, or on the go. The anti-slip base ensures your device stays in place.",
+      "Price": 19.99,
+      "Category": "Accessories",
+      "Ratings": 4.2,
+      "ProductCreationDateAndTime": "2024-08-14T09:30:00Z"
+    },
+    {
+      "ProductName": "Portable Power Bank",
+      "ProductImage": "https://m.media-amazon.com/images/I/61+oHRCLdvL._AC_SL1500_.jpg",
+      "Description": "Never run out of battery with our Portable Power Bank. With a 10,000mAh capacity, this power bank can charge your smartphone up to three times on a single charge. It features dual USB ports, allowing you to charge two devices simultaneously. The sleek and compact design makes it easy to carry in your bag, so you're always prepared, whether you're traveling or on a busy day out.",
+      "Price": 29.99,
+      "Category": "Electronics",
+      "Ratings": 4.7,
+      "ProductCreationDateAndTime": "2024-08-14T15:45:00Z"
+    },
+    {
+      "ProductName": "Eco-Friendly Water Bottle",
+      "ProductImage": "https://m1.quebecormedia.com/emp/cl_prod/canadian_living-_-e60e944bf417c2660f18024029f9c168f589f8aa-_-eco-friendly-water-bottles.jpg",
+      "Description": "Stay hydrated and do your part for the environment with our Eco-Friendly Water Bottle. Made from high-quality stainless steel, this BPA-free bottle is reusable and durable, designed to keep your drinks cold for up to 24 hours or hot for up to 12 hours. The leak-proof lid ensures you can carry it in your bag without worrying about spills. Available in a variety of stylish colors.",
+      "Price": 14.99,
+      "Category": "Home & Kitchen",
+      "Ratings": 4.8,
+      "ProductCreationDateAndTime": "2024-08-13T11:00:00Z"
+    },
+    {
+      "ProductName": "Ergonomic Office Chair",
+      "ProductImage": "https://stancephilippines.com/cdn/shop/products/Foam-Mesh-Office-Chair-Ergonomic_700x700.jpg?v=1678175937",
+      "Description": "Upgrade your workspace with our Ergonomic Office Chair, designed to provide maximum comfort during long hours of work. The chair features adjustable lumbar support, a breathable mesh back, and a cushioned seat to reduce pressure on your spine. The 360-degree swivel and smooth-rolling casters allow for easy movement, making this chair perfect for both home and office settings.",
+      "Price": 129.99,
+      "Category": "Furniture",
+      "Ratings": 4.6,
+      "ProductCreationDateAndTime": "2024-08-12T08:30:00Z"
+    },
+    {
+      "ProductName": "LED Desk Lamp",
+      "ProductImage": "https://static-01.daraz.com.bd/p/8685b16c0e378f47227c5fdcbd8d8c90.jpg",
+      "Description": "Illuminate your workspace with our energy-efficient LED Desk Lamp. This lamp offers multiple brightness levels and color temperatures to suit your needs, whether you're working, reading, or relaxing. The flexible gooseneck design allows you to adjust the light to your desired angle, and the built-in USB port makes it easy to charge your devices while you work.",
+      "Price": 24.99,
+      "Category": "Home & Office",
+      "Ratings": 4.3,
+      "ProductCreationDateAndTime": "2024-08-11T14:00:00Z"
+    },
+    {
+      "ProductName": "Fitness Tracker Watch",
+      "ProductImage": "https://duet-cdn.vox-cdn.com/thumbor/0x0:2040x1360/2400x2400/filters:focal(1020x680:1021x681):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/23336503/acastro_220321_5092_0001.jpg",
+      "Description": "Stay on top of your health goals with our Fitness Tracker Watch. This sleek and stylish watch monitors your heart rate, steps, calories burned, and sleep patterns. It also features multiple sport modes to track different activities, from running to swimming. The watch is waterproof and has a long battery life, making it the perfect companion for your fitness journey.",
+      "Price": 59.99,
+      "Category": "Wearables",
+      "Ratings": 4.4,
+      "ProductCreationDateAndTime": "2024-08-10T13:45:00Z"
+    },
+    {
+      "ProductName": "Wireless Charging Pad",
+      "ProductImage": "https://images-cdn.ubuy.co.in/65976242324c905ee0411dca-wireless-charging-pad-for-car-15w-10w.jpg",
+      "Description": "Conveniently charge your devices with our Wireless Charging Pad. Compatible with all Qi-enabled devices, this pad delivers fast and efficient charging without the need for cables. The slim and lightweight design makes it easy to carry, while the non-slip surface keeps your device secure during charging. Simply place your device on the pad and enjoy hassle-free charging.",
+      "Price": 39.99,
+      "Category": "Electronics",
+      "Ratings": 4.5,
+      "ProductCreationDateAndTime": "2024-08-09T17:00:00Z"
+    },
+    {
+      "ProductName": "Noise-Cancelling Earbuds",
+      "ProductImage": "https://i5.walmartimages.com/seo/Soundcore-by-Anker-Life-P3-Noise-Cancelling-Earbuds-Ultra-Long-50H-Playtime-APP-Control-Black_a512a433-c625-4be3-819f-95253fadcb34.a710b04fc9c5e14115798aafd760cd5d.jpeg",
+      "Description": "Immerse yourself in your favorite music with our Noise-Cancelling Earbuds. These compact and lightweight earbuds offer powerful sound quality and active noise cancellation to block out external noise. With a secure fit and sweat-resistant design, they are perfect for workouts, commuting, and daily use. The charging case provides up to 24 hours of playtime.",
+      "Price": 89.99,
+      "Category": "Audio",
+      "Ratings": 4.7,
+      "ProductCreationDateAndTime": "2024-08-08T10:15:00Z"
+    },
+    {
+      "ProductName": "Smart Home Security Camera",
+      "ProductImage": "https://cdn.bdstall.com/product-image/giant_198844.jpg",
+      "Description": "Protect your home with our Smart Home Security Camera. This camera offers 1080p HD video, night vision, and motion detection to keep an eye on your property at all times. The camera can be easily controlled via a smartphone app, allowing you to monitor live footage, receive alerts, and communicate through the built-in two-way audio. Easy to install and compatible with smart home systems.",
+      "Price": 99.99,
+      "Category": "Home Security",
+      "Ratings": 4.6,
+      "ProductCreationDateAndTime": "2024-08-07T09:00:00Z"
+    },
+    {
+      "ProductName": "Memory Foam Pillow",
+      "ProductImage": "https://cdn.sanity.io/images/d0kd7r9c/production/4b790311c9f1b9ab1c17f2c1fe49af6a6bc725ee-1720x1038.jpg?fit=min&auto=format",
+      "Description": "Sleep better with our Memory Foam Pillow, designed to provide optimal support and comfort. The contoured shape adapts to the natural curves of your head and neck, promoting proper alignment and reducing pressure points. The hypoallergenic cover is soft, breathable, and machine washable, ensuring a fresh and comfortable sleep environment every night.",
+      "Price": 34.99,
+      "Category": "Bedding",
+      "Ratings": 4.8,
+      "ProductCreationDateAndTime": "2024-08-06T12:00:00Z"
+    },
+    {
+      "ProductName": "Electric Kettle",
+      "ProductImage": "https://m.media-amazon.com/images/I/615mdbIlDpL._AC_SL1500_.jpg",
+      "Description": "Boil water quickly and efficiently with our Electric Kettle. This kettle features a 1.7-liter capacity, a stainless steel interior, and a powerful heating element that brings water to a boil in minutes. The cordless design allows for easy pouring, and the automatic shut-off feature ensures safety. Perfect for making tea, coffee, and instant meals.",
+      "Price": 49.99,
+      "Category": "Kitchen Appliances",
+      "Ratings": 4.4,
+      "ProductCreationDateAndTime": "2024-08-05T11:30:00Z"
+    },
+    {
+      "ProductName": "Digital Photo Frame",
+      "ProductImage": "https://m.media-amazon.com/images/I/718DGGMbhsL._AC_UF1000,1000_QL80_.jpg",
+      "Description": "Display your cherished memories with our Digital Photo Frame. This frame features a high-resolution display, adjustable brightness, and support for multiple photo formats. You can easily upload photos via USB or a memory card, and the frame can be set to display a slideshow with customizable transition effects. A beautiful addition to any room in your home.",
+      "Price": 79.99,
+      "Category": "Home Decor",
+      "Ratings": 4.3,
+      "ProductCreationDateAndTime": "2024-08-04T14:30:00Z"
+    },
+    {
+      "ProductName": "Laptop Cooling Pad",
+      "ProductImage": "https://m.media-amazon.com/images/I/91-bhKAgxiL._AC_SL1500_.jpg",
+      "Description": "Keep your laptop cool and running efficiently with our Laptop Cooling Pad. This pad features five powerful fans that provide excellent cooling performance, reducing the risk of overheating during intensive tasks. The ergonomic design offers multiple height adjustments for comfortable typing and viewing. The cooling pad is compatible with laptops up to 17 inches.",
+      "Price": 29.99,
+      "Category": "Computer Accessories",
+      "Ratings": 4.5,
+      "ProductCreationDateAndTime": "2024-08-03T15:15:00Z"
+    },
+    {
+      "ProductName": "Smart LED Bulbs",
+      "ProductImage": "https://images-cdn.ubuy.co.in/633b62280037f40d8b49b5cb-smart-light-bulb-wifi-light-bulb-color.jpg",
+      "Description": "Transform your home lighting with our Smart LED Bulbs. These bulbs can be controlled via a smartphone app or voice commands, allowing you to adjust brightness, color, and schedule settings. With energy-efficient LED technology, these bulbs provide long-lasting and customizable lighting for any room. Compatible with major smart home systems.",
+      "Price": 24.99,
+      "Category": "Lighting",
+      "Ratings": 4.7,
+      "ProductCreationDateAndTime": "2024-08-02T10:45:00Z"
+    },
+    {
+      "ProductName": "Cordless Vacuum Cleaner",
+      "ProductImage": "https://m.media-amazon.com/images/I/51TZRRzcTnL._AC_SL1000_.jpg",
+      "Description": "Clean your home effortlessly with our Cordless Vacuum Cleaner. This lightweight and powerful vacuum features a long-lasting battery that provides up to 40 minutes of runtime on a single charge. The versatile design allows you to clean floors, carpets, and even hard-to-reach areas with ease. The HEPA filter captures dust and allergens, ensuring a thorough clean every time.",
+      "Price": 159.99,
+      "Category": "Cleaning Appliances",
+      "Ratings": 4.6,
+      "ProductCreationDateAndTime": "2024-08-01T13:00:00Z"
+    },
+    {
+      "ProductName": "Wireless Mouse",
+      "ProductImage": "https://static-01.daraz.com.bd/p/d16e208d88a546ecbb64f76afbd8d2fe.jpg",
+      "Description": "Enhance your productivity with our Wireless Mouse, designed for comfort and precision. The ergonomic shape fits comfortably in your hand, reducing strain during extended use. With adjustable DPI settings and a responsive scroll wheel, this mouse is perfect for both work and gaming. The wireless connection ensures a clutter-free workspace, and the long battery life means you won't have to worry about frequent recharging.",
+      "Price": 19.99,
+      "Category": "Computer Accessories",
+      "Ratings": 4.4,
+      "ProductCreationDateAndTime": "2024-07-31T12:30:00Z"
+    },
+    {
+      "ProductName": "Smartwatch",
+      "ProductImage": "https://i5.walmartimages.com/asr/dda6bc1f-d282-4cf9-ad29-e827222bc4d5.8d402328f4d54e2b9a252879ec51fb79.jpeg",
+      "Description": "Stay connected and track your fitness goals with our Smartwatch. This stylish and functional watch offers a range of features, including heart rate monitoring, GPS tracking, and smartphone notifications. The customizable watch faces and interchangeable bands allow you to personalize your look. With water resistance and a long battery life, this smartwatch is perfect for everyday wear.",
+      "Price": 129.99,
+      "Category": "Wearables",
+      "Ratings": 4.5,
+      "ProductCreationDateAndTime": "2024-07-30T11:00:00Z"
+    },
+    {
+      "ProductName": "Gaming Keyboard",
+      "ProductImage": "https://cdn.mos.cms.futurecdn.net/XMDNCcbVWnrYj3zdapKrGb.jpg",
+      "Description": "Take your gaming to the next level with our Gaming Keyboard. This mechanical keyboard features responsive and tactile keys that provide a satisfying typing experience. The customizable RGB lighting allows you to create a unique gaming setup, and the programmable macro keys give you an edge in competitive play. Built to last, this keyboard is perfect for both casual and hardcore gamers.",
+      "Price": 79.99,
+      "Category": "Gaming",
+      "Ratings": 4.7,
+      "ProductCreationDateAndTime": "2024-07-29T14:45:00Z"
+    },
+    {
+      "ProductName": "Bluetooth Speaker",
+      "ProductImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDJZRAlKMTEFtqwTRoRf5O_dAjhCSU3stYNw&s",
+      "Description": "Enjoy your favorite music anywhere with our portable Bluetooth Speaker. This speaker delivers powerful and clear sound, with deep bass and crisp highs. The compact design makes it easy to carry, and the long battery life ensures you can listen to your music all day. Whether you're at home, in the park, or on the beach, this speaker is the perfect companion for your adventures.",
+      "Price": 49.99,
+      "Category": "Audio",
+      "Ratings": 4.6,
+      "ProductCreationDateAndTime": "2024-07-28T09:30:00Z"
+    },
+    {
+      "ProductName": "Smart Thermostat",
+      "ProductImage": "https://i0.wp.com/www.kingheating.com/wp-content/uploads/2021/12/Changing-thermostat-settings.jpg?fit=1280%2C720&quality=89&ssl=1",
+      "Description": "Control your home's temperature with ease using our Smart Thermostat. This device allows you to set and adjust your home's temperature from anywhere using your smartphone or voice commands. The thermostat learns your preferences over time and automatically adjusts to provide optimal comfort while saving energy. Compatible with most HVAC systems, it's an essential upgrade for modern homes.",
+      "Price": 199.99,
+      "Category": "Home Automation",
+      "Ratings": 4.5,
+      "ProductCreationDateAndTime": "2024-07-27T11:45:00Z"
+    },
+    {
+      "ProductName": "Noise-Cancelling Headphones",
+      "ProductImage": "https://www.sony-asia.com/image/6145c1d32e6ac8e63a46c912dc33c5bb?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF",
+      "Description": "Immerse yourself in your music with our Noise-Cancelling Headphones. These over-ear headphones feature advanced noise cancellation technology that blocks out background noise, allowing you to focus on your music or work. The cushioned ear cups provide comfort during long listening sessions, and the long battery life ensures you can enjoy your music without interruptions.",
+      "Price": 149.99,
+      "Category": "Audio",
+      "Ratings": 4.7,
+      "ProductCreationDateAndTime": "2024-07-26T13:15:00Z"
+    },
+    {
+      "ProductName": "Smart Doorbell",
+      "ProductImage": "https://cdn.thewirecutter.com/wp-content/media/2023/09/smart-doorbell-camera-2048px-0033.jpg?auto=webp&quality=75&width=1024",
+      "Description": "Enhance your home security with our Smart Doorbell. This doorbell features a built-in camera that provides live video streaming and motion detection alerts. You can see and communicate with visitors through your smartphone, even when you're not at home. The doorbell is easy to install and integrates seamlessly with other smart home devices for comprehensive security.",
+      "Price": 129.99,
+      "Category": "Home Security",
+      "Ratings": 4.6,
+      "ProductCreationDateAndTime": "2024-07-25T14:00:00Z"
+    },
+    {
+      "ProductName": "Portable Blender",
+      "ProductImage": "https://slursh.in/cdn/shop/products/image_2022_06_29T12_11_18_808Z_700x700.png",
+      "Description": "Blend your favorite smoothies and shakes on the go with our Portable Blender. This compact and lightweight blender features a powerful motor that effortlessly blends fruits, vegetables, and ice. The rechargeable battery provides up to 10 blends per charge, making it perfect for use at home, in the office, or at the gym. The detachable design allows for easy cleaning.",
+      "Price": 39.99,
+      "Category": "Kitchen Appliances",
+      "Ratings": 4.4,
+      "ProductCreationDateAndTime": "2024-07-24T15:30:00Z"
+    },
+    {
+      "ProductName": "Wireless Charging Station",
+      "ProductImage": "https://m.media-amazon.com/images/I/71FkeikbdhL._AC_UF894,1000_QL80_.jpg",
+      "Description": "Charge all your devices simultaneously with our Wireless Charging Station. This station features multiple charging pads that can charge smartphones, smartwatches, and earbuds at the same time. The compact and organized design eliminates cable clutter, and the fast-charging technology ensures your devices are ready to go in no time. Ideal for both home and office use.",
+      "Price": 59.99,
+      "Category": "Electronics",
+      "Ratings": 4.5,
+      "ProductCreationDateAndTime": "2024-07-23T11:15:00Z"
+    },
+    {
+      "ProductName": "Air Purifier",
+      "ProductImage": "https://diamu.com.bd/wp-content/uploads/2022/03/Samsung-Air-Purifier-AX90R7080WD-EU.jpg",
+      "Description": "Breathe cleaner air with our Air Purifier, designed to remove allergens, dust, and odors from your home. The HEPA filter captures 99.97% of airborne particles, while the activated carbon filter neutralizes odors. The purifier features multiple fan speeds and a quiet operation mode, making it perfect for use in bedrooms, living rooms, and offices. Improve your indoor air quality with ease.",
+      "Price": 129.99,
+      "Category": "Home Appliances",
+      "Ratings": 4.6,
+      "ProductCreationDateAndTime": "2024-07-22T10:00:00Z"
+    },
+    {
+      "ProductName": "Smart Light Strip",
+      "ProductImage": "https://www.bdshop.com/pub/media/catalog/product/cache/0a9842a5e3033a11158d10717601d786/s/o/sonoff_l2_rgb_strip_light.jpg",
+      "Description": "Add a touch of ambiance to any room with our Smart Light Strip. This strip features customizable RGB lighting that can be controlled via a smartphone app or voice commands. The adhesive backing allows for easy installation on walls, furniture, or under cabinets. With millions of color options and adjustable brightness, you can create the perfect mood for any occasion.",
+      "Price": 29.99,
+      "Category": "Lighting",
+      "Ratings": 4.7,
+      "ProductCreationDateAndTime": "2024-07-21T12:45:00Z"
+    },
+    {
+      "ProductName": "Portable Air Conditioner",
+      "ProductImage": "https://cdn.thewirecutter.com/wp-content/media/2021/07/portableACs-2048px-5703.jpg?auto=webp&quality=75&width=1024",
+      "Description": "Stay cool during the hot summer months with our Portable Air Conditioner. This compact and efficient unit provides powerful cooling for small to medium-sized rooms. The easy-to-use digital controls allow you to set your desired temperature, while the built-in dehumidifier helps reduce humidity levels. The unit is easy to move from room to room and includes a remote control for added convenience.",
+      "Price": 299.99,
+      "Category": "Home Appliances",
+      "Ratings": 4.5,
+      "ProductCreationDateAndTime": "2024-07-20T14:30:00Z"
+    },
+    {
+      "ProductName": "Wireless Earbuds",
+      "ProductImage": "https://www.startech.com.bd/image/cache/catalog/earbuds/earfun/free-2s/free-2s-01-500x500.webp",
+      "Description": "Enjoy true wireless freedom with our Wireless Earbuds. These earbuds deliver high-quality sound with deep bass and clear treble. The ergonomic design ensures a secure and comfortable fit, while the touch controls make it easy to manage your music and calls. With water resistance and a long battery life, these earbuds are perfect for workouts, commutes, and everyday use.",
+      "Price": 69.99,
+      "Category": "Audio",
+      "Ratings": 4.6,
+      "ProductCreationDateAndTime": "2024-07-19T09:45:00Z"
+    },
+    {
+      "ProductName": "Smart Plug",
+      "ProductImage": "https://m.media-amazon.com/images/I/41etCsF48NL.jpg",
+      "Description": "Make your home smarter with our Smart Plug, which allows you to control your appliances remotely via a smartphone app. You can schedule devices to turn on or off automatically, monitor energy usage, and integrate the plug with voice assistants for hands-free control. The compact design doesn't block adjacent outlets, making it easy to use in any room.",
+      "Price": 19.99,
+      "Category": "Home Automation",
+      "Ratings": 4.5,
+      "ProductCreationDateAndTime": "2024-07-18T11:00:00Z"
+    },
+    {
+      "ProductName": "Electric Toothbrush",
+      "ProductImage": "https://m.media-amazon.com/images/I/512V1GCv-zL._SL1000_.jpg",
+      "Description": "Achieve a brighter smile with our Electric Toothbrush, designed to deliver a deep and thorough clean. The brush features multiple cleaning modes, a two-minute timer, and a long-lasting battery. The sonic technology ensures that plaque and bacteria are effectively removed, leaving your teeth feeling fresh and clean. The toothbrush comes with replaceable brush heads and a travel case.",
+      "Price": 49.99,
+      "Category": "Personal Care",
+      "Ratings": 4.6,
+      "ProductCreationDateAndTime": "2024-07-17T13:30:00Z"
+    },
+    {
+      "ProductName": "Instant Camera",
+      "ProductImage": "https://digitalshopbd.com/public/uploads/all/POzk9x87tF7Z6U2pw8OxCUdVLb1RtVuezHMYguKm.jpg",
+      "Description": "Capture memories instantly with our Instant Camera. This fun and easy-to-use camera prints photos on the spot, making it perfect for parties, travel, and everyday moments. The camera features a built-in flash, multiple shooting modes, and a compact design that fits in your bag. The instant prints are high-quality and ready to share with friends and family.",
+      "Price": 89.99,
+      "Category": "Photography",
+      "Ratings": 4.4,
+      "ProductCreationDateAndTime": "2024-07-16T14:15:00Z"
+    },
+    {
+      "ProductName": "Home Theater Projector",
+      "ProductImage": "https://techlink.com.bd/wp-content/uploads/2023/10/BenQ-W2700i-True-4K-Home-Theater-Projector.jpg",
+      "Description": "Create a cinematic experience in your home with our Home Theater Projector. This projector delivers stunning Full HD visuals with vibrant colors and sharp details, perfect for movies, sports, and gaming. The projector features multiple input options, including HDMI and USB, and can project images up to 120 inches in size. Enjoy your favorite content on the big screen with ease.",
+      "Price": 299.99,
+      "Category": "Home Entertainment",
+      "Ratings": 4.7,
+      "ProductCreationDateAndTime": "2024-07-15T12:45:00Z"
+    },
+    {
+      "ProductName": "Smart Scale",
+      "ProductImage": "https://media.cnn.com/api/v1/images/stellar/prod/210114114323-best-smart-scale-wyze-scale-2.jpg?q=x_2,y_0,h_900,w_1601,c_crop/h_720,w_1280",
+      "Description": "Track your health and fitness progress with our Smart Scale. This scale measures weight, body fat, muscle mass, and more, providing you with a comprehensive overview of your health. The scale syncs with a smartphone app, allowing you to set goals, track trends, and monitor your progress over time. The sleek and modern design fits seamlessly into any bathroom.",
+      "Price": 39.99,
+      "Category": "Health & Fitness",
+      "Ratings": 4.5,
+      "ProductCreationDateAndTime": "2024-07-14T11:30:00Z"
+    },
+    {
+      "ProductName": "Portable Grill",
+      "ProductImage": "https://static-01.daraz.com.bd/p/b0a6d029527595b57ed9a219221fd3fb.jpg",
+      "Description": "Take your grilling on the go with our Portable Grill. This compact and lightweight grill is perfect for tailgating, camping, and picnics. The grill features a durable cooking surface, an adjustable temperature control, and a quick-ignition system for easy use. The foldable legs and carry handle make it easy to transport, so you can enjoy delicious grilled food wherever you are.",
+      "Price": 99.99,
+      "Category": "Outdoor Cooking",
+      "Ratings": 4.6,
+      "ProductCreationDateAndTime": "2024-07-13T14:00:00Z"
+    },
+    {
+      "ProductName": "Smart Coffee Maker",
+      "ProductImage": "https://www.digitaltrends.com/wp-content/uploads/2021/12/atomi-smart-coffee-maker.jpg?fit=720%2C720&p=1",
+      "Description": "Start your day right with our Smart Coffee Maker, which allows you to brew the perfect cup of coffee with just a few taps on your smartphone. The coffee maker offers customizable brewing options, including strength, temperature, and brew time. You can schedule brewing in advance and receive notifications when your coffee is ready. The sleek design and easy-to-clean components make it a great addition to any kitchen.",
+      "Price": 149.99,
+      "Category": "Kitchen Appliances",
+      "Ratings": 4.7,
+      "ProductCreationDateAndTime": "2024-07-12T13:15:00Z"
+    },
+    {
+      "ProductName": "Portable Solar Charger",
+      "ProductImage": "https://5.imimg.com/data5/HP/LE/MY-9049988/solar-charger-500x500.jpg",
+      "Description": "Harness the power of the sun with our Portable Solar Charger. This eco-friendly charger is perfect for outdoor adventures, providing reliable power for your devices even when you're off the grid. The charger features multiple USB ports, a foldable design, and a rugged exterior for durability. Whether you're hiking, camping, or traveling, this solar charger ensures you stay connected.",
+      "Price": 59.99,
+      "Category": "Outdoor Gear",
+      "Ratings": 4.5,
+      "ProductCreationDateAndTime": "2024-07-11T12:00:00Z"
+    },
+    {
+      "ProductName": "Digital Smart Lock",
+      "ProductImage": "https://www.ryans.com/storage/products/main/smartx-sx-528-wi-fi-fingerprint-smart-door-11677998097.webp",
+      "Description": "Upgrade your home security with our Digital Smart Lock. This lock offers keyless entry, allowing you to unlock your door using a smartphone app, keypad, or voice commands. The lock features multiple access codes, auto-lock functionality, and real-time activity alerts. The sleek and modern design blends seamlessly with any door, providing both security and convenience.",
+      "Price": 199.99,
+      "Category": "Home Security",
+      "Ratings": 4.6,
+      "ProductCreationDateAndTime": "2024-07-10T11:45:00Z"
+    },
+    {
+      "ProductName": "Wireless Game Controller",
+      "ProductImage": "https://static-01.daraz.com.bd/p/7ef7cce460d58defa0996a2a134b2de6.jpg_750x750.jpg_.webp",
+      "Description": "Take your gaming to the next level with our Wireless Game Controller. This controller offers responsive and precise controls, with customizable buttons and triggers for a personalized gaming experience. The ergonomic design ensures comfort during long gaming sessions, and the wireless connectivity allows for a clutter-free setup. Compatible with multiple platforms, including PC, consoles, and mobile devices.",
+      "Price": 49.99,
+      "Category": "Gaming Accessories",
+      "Ratings": 4.5,
+      "ProductCreationDateAndTime": "2024-07-09T10:30:00Z"
+    },
+    {
+      "ProductName": "Smart Garden",
+      "ProductImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPCiQTOOZCRI6GZgZasOuVmVY_YKfwlo42vg&s",
+      "Description": "Grow fresh herbs and vegetables indoors with our Smart Garden. This self-watering garden system features built-in LED grow lights, automatic watering, and a smart app that monitors the health of your plants. The compact and stylish design fits on any countertop, allowing you to enjoy homegrown produce year-round. Perfect for both beginners and experienced gardeners.",
+      "Price": 129.99,
+      "Category": "Home & Garden",
+      "Ratings": 4.7,
+      "ProductCreationDateAndTime": "2024-07-08T12:45:00Z"
+    }
+  ]
+  
