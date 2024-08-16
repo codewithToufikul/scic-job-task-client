@@ -8,6 +8,8 @@ const Home = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState(""); 
+
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -17,6 +19,7 @@ const Home = () => {
             page: currentPage,
             limit: 6,
             searchQuery,
+            category: selectedCategory, // Add category to query params
           },
         });
         setProducts(response.data.products);
@@ -26,8 +29,9 @@ const Home = () => {
       }
     };
     fetchProducts();
-  }, [currentPage, searchQuery]);
+  }, [currentPage, searchQuery, selectedCategory]);
 
+  // Filter products based on search query
   useEffect(() => {
     const query = searchQuery.toLowerCase();
     const filtered = products.filter(
@@ -38,11 +42,31 @@ const Home = () => {
     );
     setFilteredProducts(filtered);
   }, [searchQuery, products]);
+  
 
   const handleSearchReset = () => {
     setSearchQuery("");
     setCurrentPage(1);
+    setSelectedCategory(""); 
   };
+
+  // Handle category selection
+  const handleSelectedCategory = async (category) => {
+    try {
+      setCurrentPage(1);
+      setSearchQuery("");
+  
+      const response = await axios.get(`http://localhost:5000/products/${category}`);
+      
+      setProducts(response.data.products);
+      setFilteredProducts(response.data.products);
+    } catch (err) {
+      console.log("fetch err", err);
+    }
+  };
+  
+  
+
   return (
     <div className="max-w-[1440px] mx-auto">
       <Navbar />
@@ -54,7 +78,7 @@ const Home = () => {
             onSubmit={(e) => {
               e.preventDefault();
               setSearchQuery(e.target.searchBox.value);
-              setCurrentPage(1); // Reset to the first page on new search
+              setCurrentPage(1);
             }}
           >
             <div className="relative md:w-96">
@@ -86,13 +110,42 @@ const Home = () => {
           Reset!
         </button>
       </div>
-      <div className=" flex">
-        <div className=" w-[600px]"></div>
-        <div className="grid grid-cols-3 gap-4">
+      <div className="flex">
+        <div className="w-[600px]">
+          <h2 className="text-3xl">Select Category--</h2>
+          <ul className="p-5 bg-slate-50 m-4 rounded-2xl space-y-2">
+            {[
+              "Electronics",
+              "Accessories",
+              "Home & Kitchen",
+              "Furniture",
+              "Home & Office",
+              "Wearables",
+              "Audio",
+              "Home Security",
+              "Bedding",
+              "Kitchen Appliances",
+              "Home Decor",
+              "Computer Accessories",
+              "Lighting",
+              "Cleaning Appliances",
+              "Gaming",
+            ].map((category) => (
+              <li
+                key={category}
+                onClick={() => handleSelectedCategory(category)}
+                className="bg-slate-400 rounded-lg p-2 text-lg font-semibold cursor-pointer text-white"
+              >
+                {category}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="grid grid-cols-3 grid-rows-2 gap-4">
           {filteredProducts.map((product) => (
             <div key={product._id} className="card bg-base-100 shadow-xl">
               <figure className="px-5 pt-5">
-                <div className="w-62 h-44">
+                <div className="w-62 h-40">
                   <img
                     src={product.ProductImage}
                     alt={product.ProductName}
@@ -105,13 +158,17 @@ const Home = () => {
                 <h2 className="card-title">{product.ProductName}</h2>
                 <p>{product.Description.slice(0, 60)}</p>
                 <p>
-                  <span className=" text-lg font-medium">Category:</span>{" "}
+                  <span className="text-lg font-medium">Category:</span>{" "}
                   {product.Category}
                 </p>
-                <div>
+                <div className="flex justify-between">
                   <p>
-                    <span className="text-lg font-medium ">Rating:</span>{" "}
+                    <span className="text-lg font-medium">Rating:</span>{" "}
                     {product.Ratings}
+                  </p>
+                  <p>
+                    <span className="text-lg font-medium">Price:</span> $
+                    {product.Price}
                   </p>
                 </div>
                 <div className="card-actions">
