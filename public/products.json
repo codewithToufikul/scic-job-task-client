@@ -6,6 +6,7 @@
       "Price": 79.99,
       "Category": "Electronics",
       "Ratings": 4.5,
+      "BrandName": "EcoTechie",
       "ProductCreationDateAndTime": "2024-08-15T10:00:00Z"
     },
     {
@@ -15,6 +16,7 @@
       "Price": 19.99,
       "Category": "Accessories",
       "Ratings": 4.2,
+      "BrandName": "NexGadget",
       "ProductCreationDateAndTime": "2024-08-14T09:30:00Z"
     },
     {
@@ -24,6 +26,7 @@
       "Price": 29.99,
       "Category": "Electronics",
       "Ratings": 4.7,
+      "BrandName": "Smartlyfe",
       "ProductCreationDateAndTime": "2024-08-14T15:45:00Z"
     },
     {
@@ -33,6 +36,7 @@
       "Price": 14.99,
       "Category": "Home & Kitchen",
       "Ratings": 4.8,
+      "BrandName": "InnoElectro",
       "ProductCreationDateAndTime": "2024-08-13T11:00:00Z"
     },
     {
@@ -42,6 +46,7 @@
       "Price": 129.99,
       "Category": "Furniture",
       "Ratings": 4.6,
+      "BrandName": "ModernGadget",
       "ProductCreationDateAndTime": "2024-08-12T08:30:00Z"
     },
     {
@@ -51,6 +56,7 @@
       "Price": 24.99,
       "Category": "Home & Office",
       "Ratings": 4.3,
+      "BrandName": "GizmoNest",
       "ProductCreationDateAndTime": "2024-08-11T14:00:00Z"
     },
     {
@@ -60,6 +66,7 @@
       "Price": 59.99,
       "Category": "Wearables",
       "Ratings": 4.4,
+      "BrandName": "GizmoNest",
       "ProductCreationDateAndTime": "2024-08-10T13:45:00Z"
     },
     {
@@ -69,6 +76,7 @@
       "Price": 39.99,
       "Category": "Electronics",
       "Ratings": 4.5,
+      "BrandName": "TechWave",
       "ProductCreationDateAndTime": "2024-08-09T17:00:00Z"
     },
     {
@@ -78,6 +86,7 @@
       "Price": 89.99,
       "Category": "Audio",
       "Ratings": 4.7,
+      "BrandName": "ModernGadget",
       "ProductCreationDateAndTime": "2024-08-08T10:15:00Z"
     },
     {
@@ -87,6 +96,7 @@
       "Price": 99.99,
       "Category": "Home Security",
       "Ratings": 4.6,
+      "BrandName": "NexGadget",
       "ProductCreationDateAndTime": "2024-08-07T09:00:00Z"
     },
     {
@@ -96,6 +106,7 @@
       "Price": 34.99,
       "Category": "Bedding",
       "Ratings": 4.8,
+      "BrandName": "EcoTechie",
       "ProductCreationDateAndTime": "2024-08-06T12:00:00Z"
     },
     {
@@ -105,6 +116,7 @@
       "Price": 49.99,
       "Category": "Kitchen Appliances",
       "Ratings": 4.4,
+      "BrandName": "InnoElectro",
       "ProductCreationDateAndTime": "2024-08-05T11:30:00Z"
     },
     {
@@ -114,6 +126,7 @@
       "Price": 79.99,
       "Category": "Home Decor",
       "Ratings": 4.3,
+      "BrandName": "TechWave",
       "ProductCreationDateAndTime": "2024-08-04T14:30:00Z"
     },
     {
@@ -123,6 +136,7 @@
       "Price": 29.99,
       "Category": "Computer Accessories",
       "Ratings": 4.5,
+      "BrandName": "Smartlyfe",
       "ProductCreationDateAndTime": "2024-08-03T15:15:00Z"
     },
     {
@@ -132,6 +146,7 @@
       "Price": 24.99,
       "Category": "Lighting",
       "Ratings": 4.7,
+      "BrandName": "ModernGadget",
       "ProductCreationDateAndTime": "2024-08-02T10:45:00Z"
     },
     {
@@ -141,6 +156,7 @@
       "Price": 159.99,
       "Category": "Cleaning Appliances",
       "Ratings": 4.6,
+      "BrandName": "InnoElectro",
       "ProductCreationDateAndTime": "2024-08-01T13:00:00Z"
     },
     {
@@ -150,6 +166,7 @@
       "Price": 19.99,
       "Category": "Computer Accessories",
       "Ratings": 4.4,
+      "BrandName": "Smartlyfe",
       "ProductCreationDateAndTime": "2024-07-31T12:30:00Z"
     },
     {
@@ -159,6 +176,7 @@
       "Price": 129.99,
       "Category": "Wearables",
       "Ratings": 4.5,
+      "BrandName": "EcoTechie",
       "ProductCreationDateAndTime": "2024-07-30T11:00:00Z"
     },
     {
@@ -168,6 +186,7 @@
       "Price": 79.99,
       "Category": "Gaming",
       "Ratings": 4.7,
+      "BrandName": "GizmoNest",
       "ProductCreationDateAndTime": "2024-07-29T14:45:00Z"
     },
     {
@@ -177,6 +196,7 @@
       "Price": 49.99,
       "Category": "Audio",
       "Ratings": 4.6,
+      "BrandName": "TechWave",
       "ProductCreationDateAndTime": "2024-07-28T09:30:00Z"
     },
     {
@@ -186,6 +206,7 @@
       "Price": 199.99,
       "Category": "Home Automation",
       "Ratings": 4.5,
+      "BrandName": "GizmoNest",
       "ProductCreationDateAndTime": "2024-07-27T11:45:00Z"
     },
     {
@@ -195,6 +216,7 @@
       "Price": 149.99,
       "Category": "Audio",
       "Ratings": 4.7,
+      "BrandName": "NexGadget",
       "ProductCreationDateAndTime": "2024-07-26T13:15:00Z"
     },
     {
@@ -204,6 +226,7 @@
       "Price": 129.99,
       "Category": "Home Security",
       "Ratings": 4.6,
+      "BrandName": "InnoElectro",
       "ProductCreationDateAndTime": "2024-07-25T14:00:00Z"
     },
     {
@@ -213,6 +236,7 @@
       "Price": 39.99,
       "Category": "Kitchen Appliances",
       "Ratings": 4.4,
+      "BrandName": "ModernGadget",
       "ProductCreationDateAndTime": "2024-07-24T15:30:00Z"
     },
     {
@@ -222,6 +246,7 @@
       "Price": 59.99,
       "Category": "Electronics",
       "Ratings": 4.5,
+      "BrandName": "EcoTechie",
       "ProductCreationDateAndTime": "2024-07-23T11:15:00Z"
     },
     {
@@ -231,6 +256,7 @@
       "Price": 129.99,
       "Category": "Home Appliances",
       "Ratings": 4.6,
+      "BrandName": "GizmoNest",
       "ProductCreationDateAndTime": "2024-07-22T10:00:00Z"
     },
     {
@@ -240,6 +266,7 @@
       "Price": 29.99,
       "Category": "Lighting",
       "Ratings": 4.7,
+      "BrandName": "GizmoNest",
       "ProductCreationDateAndTime": "2024-07-21T12:45:00Z"
     },
     {
@@ -249,6 +276,7 @@
       "Price": 299.99,
       "Category": "Home Appliances",
       "Ratings": 4.5,
+      "BrandName": "ModernGadget",
       "ProductCreationDateAndTime": "2024-07-20T14:30:00Z"
     },
     {
@@ -258,6 +286,7 @@
       "Price": 69.99,
       "Category": "Audio",
       "Ratings": 4.6,
+      "BrandName": "EcoTechie",
       "ProductCreationDateAndTime": "2024-07-19T09:45:00Z"
     },
     {
@@ -267,6 +296,7 @@
       "Price": 19.99,
       "Category": "Home Automation",
       "Ratings": 4.5,
+      "BrandName": "InnoElectro",
       "ProductCreationDateAndTime": "2024-07-18T11:00:00Z"
     },
     {
@@ -276,6 +306,7 @@
       "Price": 49.99,
       "Category": "Personal Care",
       "Ratings": 4.6,
+      "BrandName": "GizmoNest",
       "ProductCreationDateAndTime": "2024-07-17T13:30:00Z"
     },
     {
@@ -285,6 +316,7 @@
       "Price": 89.99,
       "Category": "Photography",
       "Ratings": 4.4,
+      "BrandName": "NexGadget",
       "ProductCreationDateAndTime": "2024-07-16T14:15:00Z"
     },
     {
@@ -294,6 +326,7 @@
       "Price": 299.99,
       "Category": "Home Entertainment",
       "Ratings": 4.7,
+      "BrandName": "InnoElectro",
       "ProductCreationDateAndTime": "2024-07-15T12:45:00Z"
     },
     {
@@ -303,6 +336,7 @@
       "Price": 39.99,
       "Category": "Health & Fitness",
       "Ratings": 4.5,
+      "BrandName": "GizmoNest",
       "ProductCreationDateAndTime": "2024-07-14T11:30:00Z"
     },
     {
@@ -312,6 +346,7 @@
       "Price": 99.99,
       "Category": "Outdoor Cooking",
       "Ratings": 4.6,
+      "BrandName": "GizmoNest",
       "ProductCreationDateAndTime": "2024-07-13T14:00:00Z"
     },
     {
@@ -321,6 +356,7 @@
       "Price": 149.99,
       "Category": "Kitchen Appliances",
       "Ratings": 4.7,
+      "BrandName": "GizmoNest",
       "ProductCreationDateAndTime": "2024-07-12T13:15:00Z"
     },
     {
@@ -330,6 +366,7 @@
       "Price": 59.99,
       "Category": "Outdoor Gear",
       "Ratings": 4.5,
+      "BrandName": "TechWave",
       "ProductCreationDateAndTime": "2024-07-11T12:00:00Z"
     },
     {
@@ -339,6 +376,7 @@
       "Price": 199.99,
       "Category": "Home Security",
       "Ratings": 4.6,
+      "BrandName": "NexGadget",
       "ProductCreationDateAndTime": "2024-07-10T11:45:00Z"
     },
     {
@@ -348,6 +386,7 @@
       "Price": 49.99,
       "Category": "Gaming Accessories",
       "Ratings": 4.5,
+      "BrandName": "InnoElectro",
       "ProductCreationDateAndTime": "2024-07-09T10:30:00Z"
     },
     {
@@ -357,6 +396,7 @@
       "Price": 129.99,
       "Category": "Home & Garden",
       "Ratings": 4.7,
+      "BrandName": "InnoElectro",
       "ProductCreationDateAndTime": "2024-07-08T12:45:00Z"
     }
   ]

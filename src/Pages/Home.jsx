@@ -8,7 +8,8 @@ const Home = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
-  const [selectedCategory, setSelectedCategory] = useState(""); 
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedBrand, setSelectedBrand] = useState("");
 
 
   useEffect(() => {
@@ -19,19 +20,18 @@ const Home = () => {
             page: currentPage,
             limit: 6,
             searchQuery,
-            category: selectedCategory, // Add category to query params
           },
         });
         setProducts(response.data.products);
         setTotalPages(response.data.totalPages);
+        setFilteredProducts(response.data.products);
       } catch (err) {
         console.log("fetch err", err);
       }
     };
     fetchProducts();
-  }, [currentPage, searchQuery, selectedCategory]);
+  }, [currentPage, searchQuery]);
 
-  // Filter products based on search query
   useEffect(() => {
     const query = searchQuery.toLowerCase();
     const filtered = products.filter(
@@ -42,29 +42,70 @@ const Home = () => {
     );
     setFilteredProducts(filtered);
   }, [searchQuery, products]);
-  
 
   const handleSearchReset = () => {
     setSearchQuery("");
     setCurrentPage(1);
-    setSelectedCategory(""); 
   };
 
-  // Handle category selection
-  const handleSelectedCategory = async (category) => {
-    try {
-      setCurrentPage(1);
-      setSearchQuery("");
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:5000/products${
+            selectedCategory ? `/category/${selectedCategory}` : ""
+          }`,
+          {
+            params: {
+              page: currentPage,
+              limit: 6,
+              searchQuery,
+            },
+          }
+        );
+        setProducts(response.data.products);
+        setTotalPages(response.data.totalPages);
+        setFilteredProducts(response.data.products);
+      } catch (err) {
+        console.log("fetch err", err);
+      }
+    };
+    fetchProducts();
+  }, [currentPage, searchQuery, selectedCategory]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:5000/products${selectedCategory ? `/category/${selectedCategory}` : ""}${selectedBrand ? `/brand/${selectedBrand}` : ""}`,
+          {
+            params: {
+              page: currentPage,
+              limit: 6,
+              searchQuery,
+            },
+          }
+        );
+        setProducts(response.data.products);
+        setTotalPages(response.data.totalPages);
+        setFilteredProducts(response.data.products);
+      } catch (err) {
+        console.log("fetch err", err);
+      }
+    };
+    fetchProducts();
+  }, [currentPage, searchQuery, selectedCategory, selectedBrand]);
   
-      const response = await axios.get(`http://localhost:5000/products/${category}`);
-      
-      setProducts(response.data.products);
-      setFilteredProducts(response.data.products);
-    } catch (err) {
-      console.log("fetch err", err);
-    }
+
+  const handleCategoryChange = (e) => {
+    setSelectedCategory(e.target.value);
+    setCurrentPage(1);
   };
-  
+
+  const handleBrandChange = (e) => {
+    setSelectedBrand(e.target.value);
+    setCurrentPage(1);
+  };
   
 
   return (
@@ -110,38 +151,67 @@ const Home = () => {
           Reset!
         </button>
       </div>
-      <div className="flex">
-        <div className="w-[600px]">
-          <h2 className="text-3xl">Select Category--</h2>
-          <ul className="p-5 bg-slate-50 m-4 rounded-2xl space-y-2">
-            {[
-              "Electronics",
-              "Accessories",
-              "Home & Kitchen",
-              "Furniture",
-              "Home & Office",
-              "Wearables",
-              "Audio",
-              "Home Security",
-              "Bedding",
-              "Kitchen Appliances",
-              "Home Decor",
-              "Computer Accessories",
-              "Lighting",
-              "Cleaning Appliances",
-              "Gaming",
-            ].map((category) => (
-              <li
-                key={category}
-                onClick={() => handleSelectedCategory(category)}
-                className="bg-slate-400 rounded-lg p-2 text-lg font-semibold cursor-pointer text-white"
-              >
-                {category}
-              </li>
-            ))}
-          </ul>
+      <div className="">
+        <div className="grid grid-cols-4 justify-center items-center">
+        {/* category from */}
+          <form className=" my-4">
+            <h1>Select Category</h1>
+            <select
+              name="category"
+              className="select select-bordered w-full max-w-xs"
+              onChange={handleCategoryChange}
+            >
+              <option value="">all</option>
+              {[
+                "Electronics",
+                "Accessories",
+                "Home & Kitchen",
+                "Furniture",
+                "Home & Office",
+                "Wearables",
+                "Audio",
+                "Home Security",
+                "Bedding",
+                "Kitchen Appliances",
+                "Home Decor",
+                "Computer Accessories",
+                "Lighting",
+                "Cleaning Appliances",
+                "Gaming",
+              ].map((category) => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
+          </form>
+          {/* brand from */}
+          <form className=" my-4">
+            <h1>Select Brand</h1>
+            <select
+              name="brand"
+              className="select select-bordered w-full max-w-xs"
+              onChange={handleBrandChange}
+            >
+              <option value="">all</option>
+              {[
+                "EcoTechie",
+                "InnoElectro",
+                "EcoTechie",
+                "TechWave",
+                "GizmoNest",
+                "ModernGadget",
+                "Smartlyfe",
+                "NexGadget",
+              ].map((brand) => (
+                <option key={brand} value={brand}>
+                  {brand}
+                </option>
+              ))}
+            </select>
+          </form>
         </div>
-        <div className="grid grid-cols-3 grid-rows-2 gap-4">
+        <div className="grid grid-cols-4 grid-rows-2 gap-4 mt-8">
           {filteredProducts.map((product) => (
             <div key={product._id} className="card bg-base-100 shadow-xl">
               <figure className="px-5 pt-5">
