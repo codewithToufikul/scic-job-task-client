@@ -10,7 +10,8 @@ const Home = () => {
   const [totalPages, setTotalPages] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedBrand, setSelectedBrand] = useState("");
-
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(100);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -20,6 +21,10 @@ const Home = () => {
             page: currentPage,
             limit: 6,
             searchQuery,
+            minPrice,
+            maxPrice,
+            category: selectedCategory,
+            brand: selectedBrand,
           },
         });
         setProducts(response.data.products);
@@ -30,83 +35,16 @@ const Home = () => {
       }
     };
     fetchProducts();
-  }, [currentPage, searchQuery]);
-
-  useEffect(() => {
-    const query = searchQuery.toLowerCase();
-    const filtered = products.filter(
-      (product) =>
-        product.ProductName.toLowerCase().includes(query) ||
-        product.Category.toLowerCase().includes(query) ||
-        product.ProductCreationDateAndTime.toLowerCase().includes(query)
-    );
-    setFilteredProducts(filtered);
-  }, [searchQuery, products]);
+  }, [currentPage, searchQuery, selectedCategory, selectedBrand, minPrice, maxPrice]);
 
   const handleSearchReset = () => {
     setSearchQuery("");
     setCurrentPage(1);
+    setSelectedCategory("");
+    setSelectedBrand("");
+    setMinPrice(0);
+    setMaxPrice(100);
   };
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get(
-          `http://localhost:5000/products${
-            selectedCategory ? `/category/${selectedCategory}` : ""
-          }`,
-          {
-            params: {
-              page: currentPage,
-              limit: 6,
-              searchQuery,
-            },
-          }
-        );
-        setProducts(response.data.products);
-        setTotalPages(response.data.totalPages);
-        setFilteredProducts(response.data.products);
-      } catch (err) {
-        console.log("fetch err", err);
-      }
-    };
-    fetchProducts();
-  }, [currentPage, searchQuery, selectedCategory]);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get(
-          `http://localhost:5000/products${selectedCategory ? `/category/${selectedCategory}` : ""}${selectedBrand ? `/brand/${selectedBrand}` : ""}`,
-          {
-            params: {
-              page: currentPage,
-              limit: 6,
-              searchQuery,
-            },
-          }
-        );
-        setProducts(response.data.products);
-        setTotalPages(response.data.totalPages);
-        setFilteredProducts(response.data.products);
-      } catch (err) {
-        console.log("fetch err", err);
-      }
-    };
-    fetchProducts();
-  }, [currentPage, searchQuery, selectedCategory, selectedBrand]);
-  
-
-  const handleCategoryChange = (e) => {
-    setSelectedCategory(e.target.value);
-    setCurrentPage(1);
-  };
-
-  const handleBrandChange = (e) => {
-    setSelectedBrand(e.target.value);
-    setCurrentPage(1);
-  };
-  
 
   return (
     <div className="max-w-[1440px] mx-auto">
@@ -153,13 +91,15 @@ const Home = () => {
       </div>
       <div className="">
         <div className="grid grid-cols-4 justify-center items-center">
-        {/* category from */}
           <form className=" my-4">
             <h1>Select Category</h1>
             <select
               name="category"
               className="select select-bordered w-full max-w-xs"
-              onChange={handleCategoryChange}
+              onChange={(e) => {
+                setSelectedCategory(e.target.value);
+                setCurrentPage(1);
+              }}
             >
               <option value="">all</option>
               {[
@@ -185,13 +125,15 @@ const Home = () => {
               ))}
             </select>
           </form>
-          {/* brand from */}
           <form className=" my-4">
             <h1>Select Brand</h1>
             <select
               name="brand"
               className="select select-bordered w-full max-w-xs"
-              onChange={handleBrandChange}
+              onChange={(e) => {
+                setSelectedBrand(e.target.value);
+                setCurrentPage(1);
+              }}
             >
               <option value="">all</option>
               {[
@@ -209,6 +151,26 @@ const Home = () => {
                 </option>
               ))}
             </select>
+          </form>
+          <form className=" my-4">
+            <h1>Price Range</h1>
+            <div className="flex items-center gap-2">
+              <input
+                type="number"
+                value={minPrice}
+                onChange={(e) => setMinPrice(parseInt(e.target.value))}
+                className="input input-bordered w-24"
+                placeholder="Min"
+              />
+              <span>-</span>
+              <input
+                type="number"
+                value={maxPrice}
+                onChange={(e) => setMaxPrice(parseInt(e.target.value))}
+                className="input input-bordered w-24"
+                placeholder="Max"
+              />
+            </div>
           </form>
         </div>
         <div className="grid grid-cols-4 grid-rows-2 gap-4 mt-8">
