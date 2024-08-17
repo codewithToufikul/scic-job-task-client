@@ -11,7 +11,8 @@ const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedBrand, setSelectedBrand] = useState("");
   const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(100);
+  const [maxPrice, setMaxPrice] = useState(1000);
+  const [sortOption, setSortOption] = useState("default");
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -19,12 +20,13 @@ const Home = () => {
         const response = await axios.get(`http://localhost:5000/products`, {
           params: {
             page: currentPage,
-            limit: 6,
+            limit: 8,
             searchQuery,
             minPrice,
             maxPrice,
             category: selectedCategory,
             brand: selectedBrand,
+            sort: sortOption,
           },
         });
         setProducts(response.data.products);
@@ -35,7 +37,15 @@ const Home = () => {
       }
     };
     fetchProducts();
-  }, [currentPage, searchQuery, selectedCategory, selectedBrand, minPrice, maxPrice]);
+  }, [
+    currentPage,
+    searchQuery,
+    selectedCategory,
+    selectedBrand,
+    minPrice,
+    maxPrice,
+    sortOption,
+  ]);
 
   const handleSearchReset = () => {
     setSearchQuery("");
@@ -44,6 +54,7 @@ const Home = () => {
     setSelectedBrand("");
     setMinPrice(0);
     setMaxPrice(100);
+    setSortOption("default");
   };
 
   return (
@@ -90,7 +101,7 @@ const Home = () => {
         </button>
       </div>
       <div className="">
-        <div className="grid grid-cols-4 justify-center items-center">
+        <div className="grid grid-cols-4 gap-5 justify-center items-center">
           <form className=" my-4">
             <h1>Select Category</h1>
             <select
@@ -159,7 +170,7 @@ const Home = () => {
                 type="number"
                 value={minPrice}
                 onChange={(e) => setMinPrice(parseInt(e.target.value))}
-                className="input input-bordered w-24"
+                className="input input-bordered w-full"
                 placeholder="Min"
               />
               <span>-</span>
@@ -167,16 +178,33 @@ const Home = () => {
                 type="number"
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(parseInt(e.target.value))}
-                className="input input-bordered w-24"
+                className="input input-bordered w-full"
                 placeholder="Max"
               />
             </div>
           </form>
+          <div>
+            <h1>Sort By</h1>
+            <select
+              className="select select-bordered w-full"
+              onChange={(e) => {
+                setSortOption(e.target.value);
+                setCurrentPage(1);
+              }}
+            >
+              <option value="default" disabled selected>
+                Sort
+              </option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="date-newest">Date: Newest First</option>
+            </select>
+          </div>
         </div>
         <div className="grid grid-cols-4 grid-rows-2 gap-4 mt-8">
           {filteredProducts.map((product) => (
             <div key={product._id} className="card bg-base-100 shadow-xl">
-              <figure className="px-5 pt-5">
+            <figure className="px-5 pt-5">
                 <div className="w-62 h-40">
                   <img
                     src={product.ProductImage}
