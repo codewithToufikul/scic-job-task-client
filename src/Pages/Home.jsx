@@ -104,8 +104,8 @@ const Home = () => {
 <div className="max-w-[1440px] mx-auto">
       <Navbar />
 
-      <div className="flex justify-center items-center gap-5">
-        <div className="my-16">
+      <div className="flex md:flex-row flex-col justify-center items-center gap-5 my-8 md:my-16">
+        <div className="">
           <form
             className="w-lg mx-auto"
             onSubmit={(e) => {
@@ -145,7 +145,7 @@ const Home = () => {
       </div>
 
       <div>
-        <div className="grid grid-cols-4 justify-center items-center gap-5">
+        <div className="grid lg:grid-cols-4 grid-cols-2 justify-center items-center gap-5 px-2">
           {/* Category form */}
           <form className="my-4">
             <h1>Select Category</h1>
@@ -241,7 +241,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-4 grid-rows-2 gap-4 mt-8">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 lg:grid-rows-2 grid-cols-1 gap-4 mt-8">
           {filteredProducts.map((product) => (
             <div key={product._id} className="card bg-base-100 shadow-xl">
               <figure className="px-5 pt-5">

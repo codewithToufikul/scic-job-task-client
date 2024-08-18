@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import navLogo from '../assets/logo.png';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { useContext } from 'react';
@@ -16,6 +16,40 @@ const Navbar = () => {
         toast.error(error.message);
       });
   }
+
+  const navLink = (
+    <>
+      <p>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isActive
+              ? "bg-[#dfd4c1] mr-6 text-white p-[6px] px-3 rounded-md  font-semibold text-lg"
+              : isPending
+              ? "pending"
+              : "text-lg mr-6 font-bold"
+          }
+          to="/"
+        >
+          HOME
+        </NavLink>
+      </p>
+      <p>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isActive
+              ? " bg-[#f99a00] mr-6 text-white p-[6px] px-3 rounded-md  font-semibold text-lg "
+              : isPending
+              ? "pending"
+              : " text-lg mr-6   font-bold"
+          }
+          to="/product"
+        >
+          {" "}
+          All PRODUCT
+        </NavLink>
+      </p>
+      </>
+  )
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -40,52 +74,18 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            {navLink}
           </ul>
         </div>
         <div className=' flex items-center gap-4'>
           <img src={navLogo} alt="Company Logo" className="h-12 w-auto" />
-          <h2 className=' text-3xl font-semibold'>ProductPeak</h2>
+          <h2 className=' md:text-3xl text-lg font-semibold'>ProductPeak</h2>
         </div>
       </div>
       <div className="flex justify-end w-full gap-10">
         <div className="hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+          {navLink}
           </ul>
         </div>
         {
