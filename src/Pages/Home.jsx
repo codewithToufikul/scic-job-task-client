@@ -12,23 +12,26 @@ const Home = () => {
   const [selectedBrand, setSelectedBrand] = useState("");
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(1000);
-  const [sortOption, setSortOption] = useState("default");
+  const [sortField, setSortField] = useState("ProductCreationDateAndTime");
+  const [sortOrder, setSortOrder] = useState("desc");
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/products`, {
-          params: {
-            page: currentPage,
-            limit: 8,
-            searchQuery,
-            minPrice,
-            maxPrice,
-            category: selectedCategory,
-            brand: selectedBrand,
-            sort: sortOption,
-          },
-        });
+        const response = await axios.get(
+          `http://localhost:5000/products${selectedCategory ? `/category/${selectedCategory}` : ""}${selectedBrand ? `/brand/${selectedBrand}` : ""}`,
+          {
+            params: {
+              page: currentPage,
+              limit: 6,
+              searchQuery,
+              minPrice,
+              maxPrice,
+              sortField,
+              sortOrder,
+            },
+          }
+        );
         setProducts(response.data.products);
         setTotalPages(response.data.totalPages);
         setFilteredProducts(response.data.products);
@@ -37,24 +40,52 @@ const Home = () => {
       }
     };
     fetchProducts();
-  }, [
-    currentPage,
-    searchQuery,
-    selectedCategory,
-    selectedBrand,
-    minPrice,
-    maxPrice,
-    sortOption,
-  ]);
+  }, [currentPage, searchQuery, selectedCategory, selectedBrand, minPrice, maxPrice, sortField, sortOrder]);
+
+  useEffect(() => {
+    const query = searchQuery.toLowerCase();
+    const filtered = products.filter(
+      (product) =>
+        product.ProductName.toLowerCase().includes(query) ||
+        product.Category.toLowerCase().includes(query) ||
+        product.ProductCreationDateAndTime.toLowerCase().includes(query)
+    );
+    setFilteredProducts(filtered);
+  }, [searchQuery, products]);
 
   const handleSearchReset = () => {
     setSearchQuery("");
     setCurrentPage(1);
-    setSelectedCategory("");
-    setSelectedBrand("");
     setMinPrice(0);
-    setMaxPrice(100);
-    setSortOption("default");
+    setMaxPrice(1000);
+    setSortField("ProductCreationDateAndTime");
+    setSortOrder("desc");
+  };
+
+  const handleCategoryChange = (e) => {
+    setSelectedCategory(e.target.value);
+    setCurrentPage(1);
+  };
+
+  const handleBrandChange = (e) => {
+    setSelectedBrand(e.target.value);
+    setCurrentPage(1);
+  };
+
+  const handlePriceRangeChange = (e) => {
+    if (e.target.name === "minPrice") {
+      setMinPrice(parseFloat(e.target.value));
+    } else if (e.target.name === "maxPrice") {
+      setMaxPrice(parseFloat(e.target.value));
+    }
+    setCurrentPage(1);
+  };
+
+  const handleSortChange = (e) => {
+    const [field, order] = e.target.value.split("-");
+    setSortField(field);
+    setSortOrder(order);
+    setCurrentPage(1);
   };
 
   return (
@@ -93,26 +124,23 @@ const Home = () => {
           onClick={handleSearchReset}
           type="button"
           disabled={!searchQuery}
-          className={`text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 ${
-            !searchQuery ? "opacity-50 cursor-not-allowed" : ""
-          }`}
+          className={`text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 ${!searchQuery ? "opacity-50 cursor-not-allowed" : ""}`}
         >
           Reset!
         </button>
       </div>
-      <div className="">
-        <div className="grid grid-cols-4 gap-5 justify-center items-center">
-          <form className=" my-4">
+
+      <div>
+        <div className="grid grid-cols-4 justify-center items-center gap-5">
+          {/* Category form */}
+          <form className="my-4">
             <h1>Select Category</h1>
             <select
               name="category"
               className="select select-bordered w-full max-w-xs"
-              onChange={(e) => {
-                setSelectedCategory(e.target.value);
-                setCurrentPage(1);
-              }}
+              onChange={handleCategoryChange}
             >
-              <option value="">all</option>
+              <option value="">All</option>
               {[
                 "Electronics",
                 "Accessories",
@@ -136,21 +164,18 @@ const Home = () => {
               ))}
             </select>
           </form>
-          <form className=" my-4">
+          {/* Brand form */}
+          <form className="my-4">
             <h1>Select Brand</h1>
             <select
               name="brand"
               className="select select-bordered w-full max-w-xs"
-              onChange={(e) => {
-                setSelectedBrand(e.target.value);
-                setCurrentPage(1);
-              }}
+              onChange={handleBrandChange}
             >
-              <option value="">all</option>
+              <option value="">All</option>
               {[
                 "EcoTechie",
                 "InnoElectro",
-                "EcoTechie",
                 "TechWave",
                 "GizmoNest",
                 "ModernGadget",
@@ -163,48 +188,45 @@ const Home = () => {
               ))}
             </select>
           </form>
-          <form className=" my-4">
+          <div className="">
             <h1>Price Range</h1>
-            <div className="flex items-center gap-2">
+            <div className="flex justify-center items-center gap-2">
               <input
                 type="number"
+                name="minPrice"
                 value={minPrice}
-                onChange={(e) => setMinPrice(parseInt(e.target.value))}
-                className="input input-bordered w-full"
-                placeholder="Min"
+                onChange={handlePriceRangeChange}
+                className="block w-full p-2 border border-gray-300 rounded-lg"
+                placeholder="Min Price"
               />
-              <span>-</span>
               <input
                 type="number"
+                name="maxPrice"
                 value={maxPrice}
-                onChange={(e) => setMaxPrice(parseInt(e.target.value))}
-                className="input input-bordered w-full"
-                placeholder="Max"
+                onChange={handlePriceRangeChange}
+                className="block w-full p-2 border border-gray-300 rounded-lg"
+                placeholder="Max Price"
               />
             </div>
-          </form>
+          </div>
           <div>
-            <h1>Sort By</h1>
+            <h1>Sort</h1>
             <select
-              className="select select-bordered w-full"
-              onChange={(e) => {
-                setSortOption(e.target.value);
-                setCurrentPage(1);
-              }}
+              onChange={handleSortChange}
+              className="select select-bordered w-full max-w-xs"
             >
-              <option value="default" disabled selected>
-                Sort
-              </option>
-              <option value="price-asc">Price: Low to High</option>
-              <option value="price-desc">Price: High to Low</option>
-              <option value="date-newest">Date: Newest First</option>
+              <option value="ProductCreationDateAndTime-desc">Date: Newest</option>
+              <option value="ProductCreationDateAndTime-asc">Date: Oldest</option>
+              <option value="Price-asc">Price: Low to High</option>
+              <option value="Price-desc">Price: High to Low</option>
             </select>
           </div>
         </div>
+
         <div className="grid grid-cols-4 grid-rows-2 gap-4 mt-8">
           {filteredProducts.map((product) => (
             <div key={product._id} className="card bg-base-100 shadow-xl">
-            <figure className="px-5 pt-5">
+              <figure className="px-5 pt-5">
                 <div className="w-62 h-40">
                   <img
                     src={product.ProductImage}
@@ -237,23 +259,24 @@ const Home = () => {
               </div>
             </div>
           ))}
-          <div className="flex justify-center items-center col-span-3 mt-10">
-            <button
-              disabled={currentPage === 1}
-              onClick={() => setCurrentPage(currentPage - 1)}
-              className="btn btn-secondary"
-            >
-              Previous
-            </button>
-            <span className="px-4">{`Page ${currentPage} of ${totalPages}`}</span>
-            <button
-              disabled={currentPage === totalPages}
-              onClick={() => setCurrentPage(currentPage + 1)}
-              className="btn btn-primary"
-            >
-              Next
-            </button>
-          </div>
+        </div>
+
+        <div className="flex justify-center items-center col-span-3 mt-10">
+          <button
+            disabled={currentPage === 1}
+            onClick={() => setCurrentPage(currentPage - 1)}
+            className="btn btn-secondary"
+          >
+            Previous
+          </button>
+          <span className="px-4">{`Page ${currentPage} of ${totalPages}`}</span>
+          <button
+            disabled={currentPage === totalPages}
+            onClick={() => setCurrentPage(currentPage + 1)}
+            className="btn btn-primary"
+          >
+            Next
+          </button>
         </div>
       </div>
     </div>
